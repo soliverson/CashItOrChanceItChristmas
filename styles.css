@@ -1,0 +1,4643 @@
+/* ==========================================================
+   CASH IT OR CHANCE IT
+   40TH BIRTHDAY EDITION
+   ========================================================== */
+
+
+/* ==========================================================
+   VARIABLE
+   ========================================================== */
+
+:root {
+    --black: #000000;
+    --black-soft: #090909;
+    --black-card: #111111;
+    --gold: #d4af37;
+    --gold-bright: #ffd700;
+    --gold-light: #fff0a6;
+    --gold-dark: #8a6412;
+
+    --silver: #d9d9d9;
+    --silver-dark: #858585;
+}
+
+
+/* ==========================================================
+   RESET / BASE
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    background: #000;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top center,
+            #181107 0%,
+            #080808 32%,
+            #000 70%);
+
+    color: var(--gold);
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 1em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+#birthdayHeader {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 0 7px;
+
+    padding:
+        7px 10px 4px;
+
+    background:
+        radial-gradient(circle at center,
+            #181006 0%,
+            #050505 60%,
+            #000 100%);
+
+    border-bottom:
+        2px solid var(--gold);
+
+    overflow: visible;
+}
+
+
+/* ==========================================================
+   HEADER CONTENT
+   ========================================================== */
+
+#headerContent {
+    position: relative;
+
+    width: 100%;
+    min-height: 165px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(120px, 0.8fr) 160px minmax(400px, 2.8fr) minmax(120px, 0.8fr) 150px;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    background: transparent;
+}
+
+
+/* ==========================================================
+   BIRTHDAY PERSON
+   ========================================================== */
+
+#birthdayPerson {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+}
+
+#birthdayPhotoFrame {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    background:
+        linear-gradient(135deg,
+            #fff4a8,
+            #d4af37,
+            #805900,
+            #ffd700);
+
+    border:
+        3px solid var(--gold-bright);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 10px #ffd700,
+        0 0 22px rgba(255, 215, 0, 0.65),
+        inset 0 0 10px rgba(255, 255, 255, 0.55);
+}
+
+#birthdayPhotoFrame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -7px;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.55);
+
+    border-radius: 17px;
+
+    pointer-events: none;
+}
+
+#headerPhoto {
+    display: block;
+
+    width: 145px;
+    height: 145px;
+
+    margin: 0;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border: none;
+    border-radius: 9px;
+
+    box-shadow: none;
+}
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+#headerTitles {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+#gameTitle {
+    display: grid;
+
+    grid-template-columns:
+        auto auto auto;
+
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 12px;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+        8px 15px;
+
+    font-size:
+        clamp(2rem,
+            3vw,
+            3.7rem);
+
+    font-weight: 1000;
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(180deg,
+            #fff6bf 0%,
+            #ffd968 22%,
+            #d99b1c 55%,
+            #fff0a4 80%,
+            #b87700 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    filter:
+        drop-shadow(0 3px 1px rgba(0, 0, 0, 0.9));
+
+    animation:
+        titleShine 3s ease-in-out infinite;
+}
+
+@keyframes titleShine {
+
+    0%,
+    100% {
+        filter:
+            brightness(1) drop-shadow(0 3px 1px rgba(0, 0, 0, 0.9));
+    }
+
+    50% {
+        filter:
+            brightness(1.25) drop-shadow(0 3px 1px rgba(0, 0, 0, 0.9));
+    }
+}
+
+.titleLine {
+    display: inline-block;
+
+    white-space: nowrap;
+}
+
+.titleOr {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding:
+        4px 8px;
+
+    color: #000;
+
+    background:
+        linear-gradient(180deg,
+            #fff3a0,
+            #d4af37);
+
+    -webkit-text-fill-color: #000;
+
+    border-radius: 6px;
+
+    font-size: 0.42em;
+
+    font-weight: 1000;
+
+    line-height: 1;
+}
+
+
+/* ==========================================================
+   40TH BIRTHDAY EDITION
+   ========================================================== */
+
+#birthdayEdition {
+    margin-top: 7px;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size:
+        clamp(1.7rem,
+            2.5vw,
+            3rem);
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: #fff1b8;
+
+    text-shadow:
+        0 0 6px #ffd700,
+        0 0 15px rgba(255, 196, 0, 0.85),
+        0 0 28px rgba(255, 170, 0, 0.45);
+}
+
+
+/* ==========================================================
+   SIDE BIRTHDAY SIGNS
+   ========================================================== */
+
+.birthdaySideMessage {
+    min-height: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding:
+        10px 7px;
+
+    text-align: center;
+
+    color: #f5cf68;
+
+    background:
+        linear-gradient(145deg,
+            #111,
+            #030303);
+
+    border:
+        2px solid var(--gold);
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.25),
+        inset 0 0 15px rgba(255, 215, 0, 0.06);
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size:
+        clamp(0.8rem,
+            1vw,
+            1.15rem);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    transform:
+        rotate(-1deg);
+}
+
+.birthdaySideRight {
+    transform:
+        rotate(1deg);
+}
+
+.birthdaySideMessage span {
+    display: block;
+}
+
+
+/* ==========================================================
+   HEADER BUTTONS
+   ========================================================== */
+
+#headerButtons {
+    position: static;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 7px;
+
+    width: 100%;
+}
+
+#fullScreenBtn,
+#watchIntroBtn {
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+        9px 10px;
+
+    background:
+        linear-gradient(180deg,
+            #f6d35e,
+            #bd8f17);
+
+    border:
+        1px solid #ffe47a;
+
+    border-radius: 7px;
+
+    color: #000;
+
+    font-size:
+        clamp(0.75rem,
+            0.9vw,
+            1rem);
+
+    font-weight: 700;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+}
+
+#fullScreenBtn:hover,
+#watchIntroBtn:hover {
+    background:
+        linear-gradient(180deg,
+            #fff2a0,
+            #ffd700);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==========================================================
+   GOLD DIVIDER
+   ========================================================== */
+
+.goldDivider {
+    width: 100%;
+    height: 3px;
+
+    margin-top: 5px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #8f6712,
+            #ffd700,
+            #fff2a4,
+            #ffd700,
+            #8f6712,
+            transparent);
+
+    box-shadow:
+        0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+
+/* ==========================================================
+   MAIN GAME
+   ========================================================== */
+
+main,
+#gameArea {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(220px, 250px);
+
+    width: 100%;
+
+    max-width: 1600px;
+
+    margin:
+        0 auto;
+
+    gap: 12px;
+
+    background: transparent;
+}
+
+
+/* ==========================================================
+   BRIEFCASE SECTION
+   ========================================================== */
+
+#briefcasesSection {
+    min-width: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+        14px 8px 5px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(180deg,
+            rgba(16, 16, 16, 0.96),
+            rgba(0, 0, 0, 0.98));
+
+    border:
+        1px solid rgba(212, 175, 55, 0.45);
+
+    border-radius: 8px;
+
+    box-shadow:
+        inset 0 0 25px rgba(255, 215, 0, 0.04);
+}
+
+
+/* ==========================================================
+   BRIEFCASE GRID
+   ========================================================== */
+
+#briefcasesContainer {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7,
+            minmax(0, 1fr));
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap:
+        18px 8px;
+
+    width: 100%;
+
+    margin:
+        0 auto;
+
+    padding:
+        5px 0 0;
+
+    background: transparent;
+}
+
+
+/* ==========================================================
+   BRIEFCASES
+   ========================================================== */
+
+.briefcase {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    padding:
+        5px 5px 4px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    color: #000;
+
+    background:
+        linear-gradient(145deg,
+            #f7f7f7 0%,
+            #bcbcbc 15%,
+            #eeeeee 34%,
+            #8d8d8d 55%,
+            #e8e8e8 77%,
+            #a4a4a4 100%);
+
+    border:
+        2px solid #e3e3e3;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.9),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.3);
+
+    overflow: visible;
+
+    user-select: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ==========================================================
+   BRIEFCASE HANDLE
+   ========================================================== */
+
+.briefcase::before {
+    content: "";
+
+    position: absolute;
+
+    top: -14px;
+    left: 50%;
+
+    width: 42%;
+    height: 14px;
+
+    transform:
+        translateX(-50%);
+
+    border:
+        4px solid #bababa;
+
+    border-bottom: 0;
+
+    border-radius:
+        7px 7px 0 0;
+
+    background: #4d4d4d;
+
+    box-shadow:
+        inset 0 0 2px #fff,
+        0 1px 2px rgba(0, 0, 0, 0.8);
+
+    pointer-events: none;
+}
+
+.briefcase::after {
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+    left: 50%;
+
+    width: 30%;
+    height: 6px;
+
+    transform:
+        translateX(-50%);
+
+    background: #111;
+
+    border-radius:
+        4px 4px 0 0;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   BRIEFCASE HOVER
+   ========================================================== */
+
+.briefcase:not(.center-open):not(.personal-box-reveal):hover {
+    transform:
+        translateY(-3px) scale(1.025);
+
+    background:
+        linear-gradient(145deg,
+            #fffbe0,
+            #d6bd66,
+            #f7f7f7,
+            #8d8d8d);
+
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ==========================================================
+   BRIEFCASE PHOTOS
+   ========================================================== */
+
+.briefcase-img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    object-fit: cover;
+
+    object-position:
+        center top;
+
+    margin: 0;
+
+    border:
+        2px solid rgba(75, 75, 75, 0.55);
+
+    border-radius: 6px;
+
+    background: #222;
+}
+
+
+/* ==========================================================
+   BRIEFCASE NUMBER
+   ========================================================== */
+
+.briefcase-number {
+    width: 100%;
+
+    margin-top: 4px;
+
+    padding:
+        5px 4px;
+
+    text-align: center;
+
+    font-weight: 900;
+
+    font-size:
+        clamp(0.9rem,
+            1.25vw,
+            1.25rem);
+
+    line-height: 1;
+
+    color: #000;
+
+    background:
+        linear-gradient(180deg,
+            #fff1a1,
+            #f4c33d 40%,
+            #d39b14 100%);
+
+    border:
+        1px solid #fff0a0;
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.7);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================================
+   PERSONAL BOX
+   ========================================================== */
+
+.briefcase.personal {
+    background:
+        linear-gradient(145deg,
+            #fff8c9,
+            #d4af37,
+            #fff,
+            #9b7414);
+
+    border:
+        4px solid var(--gold-bright);
+
+    transform:
+        scale(1.03);
+
+    z-index: 20;
+
+    animation:
+        birthdayPersonalPulse 1.4s ease-in-out infinite;
+}
+
+.briefcase.personal:hover {
+    transform:
+        scale(1.03);
+}
+
+@keyframes birthdayPersonalPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 8px #ffd700,
+            0 0 16px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        box-shadow:
+            0 0 15px #ffd700,
+            0 0 30px #ffd700,
+            0 0 40px rgba(255, 215, 0, 0.45);
+    }
+}
+
+
+/* ==========================================================
+   OPENED BOX
+   ========================================================== */
+
+.briefcase.opened {
+    opacity: 0.4;
+
+    filter:
+        grayscale(0.75);
+}
+
+
+/* ==========================================================
+   GAME MESSAGE
+   ========================================================== */
+
+#briefcasesInfo {
+    margin-top: 10px;
+
+    padding:
+        5px 5px 2px;
+
+    background: transparent;
+}
+
+#gameMessage {
+    margin: 0;
+
+    text-align: center;
+
+    color: #f6d05a;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(1.35rem,
+            1.8vw,
+            2rem);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    text-shadow:
+        0 0 7px #d4af37,
+        0 0 15px rgba(255, 215, 0, 0.45);
+}
+
+
+/* ==========================================================
+   PRIZE SECTION
+   ========================================================== */
+
+#prizesSection {
+    min-width: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+        8px 10px 12px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(180deg,
+            #101010,
+            #020202);
+
+    border:
+        2px solid var(--gold);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.25),
+        inset 0 0 20px rgba(255, 215, 0, 0.04);
+}
+
+.prizeBoardHeader {
+    width: 100%;
+
+    margin:
+        0 0 7px;
+
+    padding:
+        7px 4px;
+
+    background:
+        linear-gradient(180deg,
+            #1c1606,
+            #050505);
+
+    border:
+        1px solid var(--gold);
+
+    border-radius: 5px;
+}
+
+#prizesSection h2 {
+    margin:
+        4px 0 8px;
+
+    font-size:
+        clamp(1.35rem,
+            1.8vw,
+            1.9rem);
+
+    line-height: 1;
+
+    color: #f9cf45;
+
+    font-weight: 1000;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 7px rgba(255, 215, 0, 0.7);
+}
+
+.prizeBoardHeader h2 {
+    margin: 0 !important;
+}
+
+
+/* ==========================================================
+   PRIZE BOARD
+   ========================================================== */
+
+#prizeBoard {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,
+            minmax(0, 1fr));
+
+    gap:
+        2px 12px;
+
+    width: 100%;
+
+    margin:
+        0 0 10px;
+
+    padding:
+        4px 4px 8px;
+
+    background: transparent;
+}
+
+.prize-column {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+#prizeBoard li {
+    margin:
+        3px 0;
+
+    font-size:
+        clamp(0.9rem,
+            1.05vw,
+            1.15rem);
+
+    line-height: 1.15;
+
+    font-weight: 900;
+
+    color: #ffd83e;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 4px rgba(255, 215, 0, 0.4);
+}
+
+#prizeBoard li.eliminated {
+    color: #555;
+
+    opacity: 0.65;
+
+    text-decoration:
+        line-through;
+}
+
+
+/* ==========================================================
+   PREVIOUS OFFERS
+   ========================================================== */
+
+#previousOffersSection {
+    width: 100%;
+
+    min-height: 135px;
+
+    margin-top: 4px;
+
+    padding-top: 9px;
+
+    border-top:
+        2px solid var(--gold);
+}
+
+#previousOffersSection h2 {
+    font-size:
+        clamp(1.1rem,
+            1.5vw,
+            1.6rem);
+
+    line-height: 1.05;
+}
+
+#offersHistory {
+    width: 100%;
+
+    margin:
+        7px 0 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+#offersHistory li {
+    margin:
+        3px 0;
+
+    color: #d8b746;
+
+    font-size:
+        clamp(0.8rem,
+            0.95vw,
+            1rem);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+/* ==========================================================
+   BIRTHDAY FOOTER
+   ========================================================== */
+
+#birthdayFooter {
+    width: 100%;
+
+    max-width: 1600px;
+
+    margin:
+        7px auto 0;
+
+    padding:
+        7px 14px;
+
+    display: grid;
+
+    grid-template-columns:
+        180px 1fr 180px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(180deg,
+            #111,
+            #020202);
+
+    border-top:
+        2px solid var(--gold);
+
+    border-bottom:
+        1px solid rgba(212, 175, 55, 0.5);
+}
+
+#birthdayFooterCenter {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+#birthdayFooterText {
+    color: #ffe8a0;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(1.7rem,
+            2.8vw,
+            3rem);
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 7px #ffd700,
+        0 0 18px rgba(255, 180, 0, 0.7);
+}
+
+.footerHeart,
+.footerSparkle {
+    color: #ffd700;
+
+    font-size:
+        clamp(1.2rem,
+            1.8vw,
+            2rem);
+}
+
+.birthdayFooterSide {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 50px;
+
+    padding:
+        6px 8px;
+
+    color: #efcb68;
+
+    text-align: center;
+
+    font-family:
+        "Segoe Print",
+        cursive;
+
+    font-size:
+        clamp(0.7rem,
+            0.9vw,
+            0.95rem);
+
+    line-height: 1.15;
+
+    border:
+        1px solid rgba(212, 175, 55, 0.7);
+
+    background: #090909;
+}
+
+
+/* ==========================================================
+   GENERAL BUTTONS
+   ========================================================== */
+
+button {
+    background:
+        linear-gradient(45deg,
+            #d4af37,
+            #ffcf00);
+
+    color: #000;
+
+    border: none;
+
+    padding:
+        8px 16px;
+
+    margin: 6px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 1em;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform:
+        scale(1.04);
+
+    box-shadow:
+        0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform:
+        scale(0.98);
+}
+
+
+/* ==========================================================
+   DEAL BUTTON
+   ========================================================== */
+
+button.deal {
+    background:
+        linear-gradient(45deg,
+            #4caf50,
+            #2e7d32);
+
+    color: #fff;
+
+    border:
+        2px solid #1b5e20;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================================
+   NO DEAL BUTTON
+   ========================================================== */
+
+button.decline {
+    background:
+        linear-gradient(45deg,
+            #ff4c4c,
+            #d10000);
+
+    color: #fff;
+
+    border:
+        2px solid #a30000;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================================
+   MODAL
+   ========================================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 10000;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background:
+        rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.modal-content {
+    width: 80%;
+
+    max-width: 500px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #f4ce58;
+
+    background:
+        radial-gradient(circle at top,
+            #241c08,
+            #0c0c0c 55%,
+            #020202);
+
+    border:
+        3px solid var(--gold);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 15px rgba(255, 215, 0, 0.65),
+        0 0 40px rgba(255, 215, 0, 0.2);
+
+    animation:
+        modalEntrance 0.5s ease-out;
+}
+
+@keyframes modalEntrance {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   MODAL MESSAGES
+   ========================================================== */
+
+.message {
+    margin-bottom: 10px;
+
+    line-height: 1.3;
+
+    font-size: 1.1em;
+}
+
+.cases-to-open {
+    font-size:
+        clamp(24px,
+            2.7vw,
+            46px);
+
+    font-weight: 800;
+
+    color: #ffd700;
+
+    text-align: center;
+}
+
+.cases-to-open strong {
+    font-size: 1.35em;
+}
+
+.round-number {
+    font-size:
+        clamp(26px,
+            3vw,
+            50px);
+
+    font-weight: 800;
+
+    color: #ffd700;
+}
+
+.bank-offer {
+    font-size:
+        clamp(32px,
+            4vw,
+            65px);
+
+    font-weight: 900;
+
+    color: #ffd700;
+}
+
+
+/* ==========================================================
+   RESULT MODAL
+   ========================================================== */
+
+.result-modal {
+    background:
+        linear-gradient(135deg,
+            #ffd700,
+            #ffea00,
+            #ffd700);
+
+    box-shadow:
+        0 0 20px 5px rgba(255, 215, 0, 0.8);
+
+    animation:
+        resultPulse 2s infinite;
+}
+
+.result-modal .message {
+    color: #000;
+
+    font-weight: bold;
+}
+
+@keyframes resultPulse {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.02);
+    }
+}
+
+
+/* ==========================================================
+   FIREWORKS
+   ========================================================== */
+
+#fireworksContainer {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 9999;
+}
+
+.firework {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background:
+        radial-gradient(circle,
+            #fff,
+            rgba(212, 175, 55, 0));
+
+    border-radius: 50%;
+
+    animation:
+        explode 1.5s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform:
+            scale(1);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            scale(5);
+
+        opacity: 0;
+    }
+}
+
+
+/* ==========================================================
+   INTRO VIDEO
+   ========================================================== */
+
+#introVideoContainer {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 20000;
+}
+
+#introVideo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+#introButtons {
+    position: absolute;
+
+    bottom: 40px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 21000;
+}
+
+#introButtons button {
+    padding:
+        12px 20px;
+
+    font-size: 1.1em;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+}
+
+#introPlayButton,
+#introFullScreenButton,
+#skipIntroButton {
+    position: static;
+}
+
+
+/* ==========================================================
+   CENTERED CASE REVEAL
+   ========================================================== */
+
+body > .center-open,
+body > .personal-box-reveal,
+body.tv-fullscreen > .center-open,
+body.tv-fullscreen > .personal-box-reveal {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+    rotate: none !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background:
+        rgba(0, 0, 0, 0.76) !important;
+
+    box-shadow: none !important;
+
+    opacity: 1 !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    overflow: hidden !important;
+
+    pointer-events: none !important;
+
+    cursor: default !important;
+
+    transition: none !important;
+    animation: none !important;
+
+    z-index: 15000 !important;
+}
+
+body > .center-open:hover,
+body > .personal-box-reveal:hover,
+body.tv-fullscreen > .center-open:hover,
+body.tv-fullscreen > .personal-box-reveal:hover {
+    transform: none !important;
+
+    translate: none !important;
+    scale: none !important;
+    rotate: none !important;
+
+    animation: none !important;
+    transition: none !important;
+}
+
+
+/* ==========================================================
+   CENTER REVEAL PHOTO
+   ========================================================== */
+
+body > .center-open > .center-img,
+body.tv-fullscreen > .center-open > .center-img {
+    position: static !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width:
+        min(430px,
+            42vw) !important;
+
+    max-height:
+        62vh !important;
+
+    margin:
+        0 auto !important;
+
+    padding: 0 !important;
+
+    object-fit:
+        contain !important;
+
+    object-position:
+        center center !important;
+
+    border:
+        6px solid #ffd700 !important;
+
+    border-radius:
+        12px !important;
+
+    box-shadow:
+        0 0 20px #ffd700,
+        0 0 45px rgba(255, 215, 0, 0.75) !important;
+
+    transform: none !important;
+
+    animation: none !important;
+}
+
+
+/* ==========================================================
+   PERSONAL BOX REVEAL
+   ========================================================== */
+
+body > .personal-box-reveal > .center-img,
+body.tv-fullscreen > .personal-box-reveal > .center-img {
+    width: auto !important;
+    height: auto !important;
+
+    max-width:
+        min(480px,
+            46vw) !important;
+
+    max-height:
+        65vh !important;
+
+    margin:
+        0 auto !important;
+
+    object-fit:
+        contain !important;
+
+    border:
+        7px solid #ffd700 !important;
+
+    border-radius:
+        12px !important;
+
+    box-shadow:
+        0 0 25px #ffd700,
+        0 0 55px #ffd700,
+        0 0 75px rgba(255, 215, 0, 0.55) !important;
+
+    transform: none !important;
+
+    animation: none !important;
+}
+
+
+/* ==========================================================
+   REVEAL AMOUNT
+   ========================================================== */
+
+body > .center-open > .center-amount,
+body > .personal-box-reveal > .center-amount {
+    display: block !important;
+
+    width: auto !important;
+
+    margin:
+        10px auto 0 !important;
+
+    padding:
+        8px 20px !important;
+
+    background:
+        #ffd700 !important;
+
+    color:
+        #000 !important;
+
+    border-radius:
+        8px !important;
+
+    font-size:
+        clamp(24px,
+            2.5vw,
+            42px) !important;
+
+    line-height:
+        1 !important;
+
+    font-weight:
+        900 !important;
+
+    white-space:
+        nowrap !important;
+}
+
+
+/* ==========================================================
+   THIS IS YOUR BOX
+   ========================================================== */
+
+body > .personal-box-reveal > .personal-box-message {
+    display: block !important;
+
+    width: auto !important;
+
+    margin:
+        10px auto 3px !important;
+
+    padding:
+        0 !important;
+
+    color:
+        #ffd700 !important;
+
+    font-size:
+        clamp(30px,
+            3.4vw,
+            56px) !important;
+
+    line-height:
+        1 !important;
+
+    font-weight:
+        900 !important;
+
+    text-align:
+        center !important;
+
+    white-space:
+        nowrap !important;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 18px #ffd700 !important;
+}
+
+
+/* ==========================================================
+   DESKTOP / TV FULLSCREEN
+   ========================================================== */
+
+@media (min-width: 769px) {
+
+    html:fullscreen,
+    html:fullscreen body {
+        width: 100vw;
+
+        height: 100vh;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow:
+            hidden !important;
+
+        background: #000;
+    }
+
+
+    body.tv-fullscreen {
+        width: 100vw;
+
+        height: 100vh;
+
+        max-height: 100vh;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow:
+            hidden !important;
+
+        background: #000;
+
+        display: grid;
+
+        grid-template-rows:
+            18vh minmax(0, 1fr) 6vh;
+    }
+
+
+    /* ---------------- HEADER ---------------- */
+
+    body.tv-fullscreen #birthdayHeader {
+        width: 100%;
+
+        height: 18vh;
+
+        min-height: 0;
+
+        margin: 0;
+
+        padding:
+            0.5vh 0.7vw;
+
+        overflow: visible;
+    }
+
+    body.tv-fullscreen #headerContent {
+        width: 100%;
+
+        height:
+            calc(100% - 5px);
+
+        min-height: 0;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(100px, 0.75fr) minmax(100px, 8vw) minmax(360px, 3fr) minmax(100px, 0.75fr) minmax(110px, 9vw);
+
+        gap:
+            0.7vw;
+
+        align-items: center;
+    }
+
+    body.tv-fullscreen #birthdayPhotoFrame {
+        padding:
+            0.3vh;
+
+        border-width:
+            3px;
+    }
+
+    body.tv-fullscreen #headerPhoto {
+        width: auto;
+
+        height: 13vh;
+
+        max-width: 9vw;
+
+        margin: 0;
+
+        object-fit: cover;
+    }
+
+    body.tv-fullscreen #headerTitles {
+        width: 100%;
+    }
+
+    body.tv-fullscreen #gameTitle {
+        margin: 0;
+
+        padding:
+            0 8px;
+
+        font-size:
+            clamp(24px,
+                2.55vw,
+                48px);
+
+        line-height: 1;
+    }
+
+    body.tv-fullscreen #birthdayEdition {
+        margin-top:
+            0.5vh;
+
+        font-size:
+            clamp(20px,
+                2vw,
+                38px);
+    }
+
+    body.tv-fullscreen .birthdaySideMessage {
+        min-height: 0;
+
+        height: 12vh;
+
+        padding:
+            0.4vh 0.4vw;
+
+        font-size:
+            clamp(9px,
+                0.85vw,
+                16px);
+    }
+
+    body.tv-fullscreen #headerButtons {
+        position: static;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap:
+            0.5vh;
+    }
+
+    body.tv-fullscreen #fullScreenBtn,
+    body.tv-fullscreen #watchIntroBtn {
+        width: 100%;
+
+        margin: 0;
+
+        padding:
+            0.6vh 0.5vw;
+
+        font-size:
+            clamp(9px,
+                0.72vw,
+                13px);
+    }
+
+
+    /* ---------------- MAIN ---------------- */
+
+    body.tv-fullscreen main,
+    body.tv-fullscreen #gameArea {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        max-width: none;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr) minmax(220px, 18vw);
+
+        gap:
+            0.65vw;
+
+        margin: 0;
+
+        padding:
+            1.5vh 0.65vw 0.5vh;
+
+        overflow:
+            hidden !important;
+    }
+
+
+    /* ---------------- CASE SECTION ---------------- */
+
+    body.tv-fullscreen #briefcasesSection {
+        min-width: 0;
+
+        min-height: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        margin: 0;
+
+        padding:
+            1.5vh 0.45vw 0.4vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        overflow:
+            hidden !important;
+    }
+
+
+    /* ---------------- GRID ---------------- */
+
+    body.tv-fullscreen #briefcasesContainer {
+        flex: 1;
+
+        min-height: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(7,
+                minmax(0, 1fr));
+
+        grid-template-rows:
+            repeat(2,
+                minmax(0, 1fr));
+
+        gap:
+            2vh 0.5vw;
+
+        margin: 0;
+
+        padding:
+            1.2vh 0 0;
+
+        overflow:
+            visible !important;
+    }
+
+
+    /* ---------------- CASES ---------------- */
+
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) {
+        min-width: 0;
+
+        min-height: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        margin: 0;
+
+        padding:
+            0.35vh 0.25vw;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        overflow: visible;
+    }
+
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-img {
+        width: 100%;
+
+        height:
+            calc(100% - 3.2vh);
+
+        min-height: 0;
+
+        aspect-ratio: auto;
+
+        object-fit: cover;
+
+        object-position:
+            center top;
+    }
+
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-number {
+        flex:
+            0 0 2.7vh;
+
+        width: 100%;
+
+        height: 2.7vh;
+
+        margin-top:
+            0.3vh;
+
+        padding:
+            0.2vh 0.2vw;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        font-size:
+            clamp(11px,
+                0.95vw,
+                18px);
+    }
+
+    body.tv-fullscreen .briefcase.personal {
+        border:
+            4px solid #ffd700 !important;
+
+        transform:
+            scale(1.03) !important;
+
+        z-index: 20;
+    }
+
+
+    /* ---------------- GAME MESSAGE ---------------- */
+
+    body.tv-fullscreen #briefcasesInfo {
+        flex:
+            0 0 4vh;
+
+        height: 4vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        margin: 0;
+
+        padding:
+            0.4vh 0;
+    }
+
+    body.tv-fullscreen #gameMessage {
+        font-size:
+            clamp(17px,
+                1.45vw,
+                27px);
+    }
+
+
+    /* ---------------- PRIZES ---------------- */
+
+    body.tv-fullscreen #prizesSection {
+        min-width: 0;
+
+        min-height: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        margin: 0;
+
+        padding:
+            0.6vh 0.6vw;
+
+        overflow:
+            hidden !important;
+    }
+
+    body.tv-fullscreen .prizeBoardHeader {
+        margin-bottom:
+            0.5vh;
+
+        padding:
+            0.5vh 0.2vw;
+    }
+
+    body.tv-fullscreen #prizesSection h2 {
+        margin:
+            0.3vh 0;
+
+        font-size:
+            clamp(17px,
+                1.45vw,
+                27px);
+    }
+
+    body.tv-fullscreen #prizeBoard {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            0 0.5vw;
+
+        margin:
+            0 0 0.5vh;
+
+        padding:
+            0.2vh 0.2vw;
+    }
+
+    body.tv-fullscreen #prizeBoard li {
+        margin:
+            0.15vh 0;
+
+        font-size:
+            clamp(11px,
+                0.9vw,
+                17px);
+
+        line-height: 1.08;
+    }
+
+    body.tv-fullscreen #previousOffersSection {
+        min-height: 0;
+
+        margin-top:
+            0.5vh;
+
+        padding-top:
+            0.7vh;
+    }
+
+    body.tv-fullscreen #previousOffersSection h2 {
+        font-size:
+            clamp(15px,
+                1.2vw,
+                22px);
+    }
+
+    body.tv-fullscreen #offersHistory li {
+        margin:
+            0.1vh 0;
+
+        font-size:
+            clamp(10px,
+                0.75vw,
+                14px);
+
+        line-height: 1.1;
+    }
+
+
+    /* ---------------- FOOTER ---------------- */
+
+    body.tv-fullscreen #birthdayFooter {
+        width: 100%;
+
+        height: 6vh;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding:
+            0.3vh 0.7vw;
+
+        grid-template-columns:
+            minmax(120px, 11vw) 1fr minmax(120px, 11vw);
+
+        overflow: hidden;
+    }
+
+    body.tv-fullscreen #birthdayFooterText {
+        font-size:
+            clamp(21px,
+                2.2vw,
+                42px);
+    }
+
+    body.tv-fullscreen .birthdayFooterSide {
+        min-height: 0;
+
+        height: 4.7vh;
+
+        padding:
+            0.2vh 0.3vw;
+
+        font-size:
+            clamp(8px,
+                0.65vw,
+                12px);
+    }
+
+    body.tv-fullscreen .footerHeart,
+    body.tv-fullscreen .footerSparkle {
+        font-size:
+            clamp(15px,
+                1.5vw,
+                28px);
+    }
+
+
+    /* ---------------- FULLSCREEN MODAL ---------------- */
+
+    body.tv-fullscreen .modal-content {
+        max-width: 55vw;
+
+        max-height: 75vh;
+
+        padding:
+            clamp(15px,
+                2vw,
+                35px);
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1200px) and (min-width: 769px) {
+
+    #headerContent {
+        grid-template-columns:
+            110px 125px minmax(320px, 1fr) 120px;
+
+        gap: 8px;
+    }
+
+    .birthdaySideRight {
+        display: none;
+    }
+
+    #headerButtons {
+        width: 120px;
+    }
+
+    #gameTitle {
+        font-size:
+            clamp(1.8rem,
+                3vw,
+                2.8rem);
+    }
+
+    main,
+    #gameArea {
+        grid-template-columns:
+            minmax(0, 1fr) 210px;
+    }
+
+    #briefcasesContainer {
+        gap:
+            17px 5px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE / PHONE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    html,
+    html:fullscreen {
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 100% !important;
+
+        overflow-x:
+            hidden !important;
+
+        overflow-y:
+            auto !important;
+
+        background:
+            #000 !important;
+    }
+
+    body,
+    body.tv-fullscreen {
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-height: none !important;
+
+        min-height:
+            100vh !important;
+
+        margin:
+            0 !important;
+
+        padding:
+            3px !important;
+
+        display:
+            block !important;
+
+        overflow-x:
+            hidden !important;
+
+        overflow-y:
+            auto !important;
+
+        background:
+            #000 !important;
+    }
+
+
+    /* ---------------- PHONE HEADER ---------------- */
+
+    #birthdayHeader,
+    body.tv-fullscreen #birthdayHeader {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        margin-bottom:
+            5px !important;
+
+        padding:
+            6px 4px !important;
+    }
+
+    #headerContent,
+    body.tv-fullscreen #headerContent {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        flex-wrap:
+            nowrap !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            center !important;
+
+        gap:
+            5px !important;
+    }
+
+
+    /* hide side signs on phone */
+
+    .birthdaySideMessage {
+        display:
+            none !important;
+    }
+
+
+    /* birthday person */
+
+    #birthdayPerson {
+        order: 1;
+    }
+
+    #birthdayPhotoFrame {
+        padding:
+            3px;
+
+        border-width:
+            2px;
+    }
+
+    #headerPhoto,
+    body.tv-fullscreen #headerPhoto {
+        width:
+            92px !important;
+
+        height:
+            92px !important;
+
+        max-width:
+            none !important;
+
+        margin:
+            0 !important;
+
+        border-width:
+            0 !important;
+    }
+
+
+    /* title */
+
+    #headerTitles,
+    body.tv-fullscreen #headerTitles {
+        order: 2;
+
+        width:
+            100% !important;
+    }
+
+    #gameTitle,
+    body.tv-fullscreen #gameTitle {
+        display:
+            flex !important;
+
+        flex-wrap:
+            wrap !important;
+
+        justify-content:
+            center !important;
+
+        align-items:
+            center !important;
+
+        gap:
+            5px !important;
+
+        width:
+            100% !important;
+
+        margin:
+            0 !important;
+
+        padding:
+            2px !important;
+
+        font-size:
+            clamp(1.4rem,
+                7vw,
+                2rem) !important;
+
+        line-height:
+            1 !important;
+    }
+
+    #birthdayEdition,
+    body.tv-fullscreen #birthdayEdition {
+        margin-top:
+            3px !important;
+
+        font-size:
+            clamp(1.35rem,
+                6.5vw,
+                2rem) !important;
+    }
+
+
+    /* ---------------- PHONE HEADER BUTTONS ---------------- */
+
+    #headerButtons,
+    body.tv-fullscreen #headerButtons {
+        order: 3;
+
+        position:
+            static !important;
+
+        width:
+            100% !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            row !important;
+
+        flex-wrap:
+            wrap !important;
+
+        justify-content:
+            center !important;
+
+        align-items:
+            center !important;
+
+        gap:
+            4px !important;
+
+        margin:
+            3px 0 !important;
+    }
+
+    #fullScreenBtn,
+    #watchIntroBtn {
+        width:
+            auto !important;
+
+        font-size:
+            0.72em !important;
+
+        padding:
+            5px 8px !important;
+
+        margin:
+            2px !important;
+    }
+
+
+    /* ---------------- PHONE MAIN ---------------- */
+
+    main,
+    #gameArea,
+    body.tv-fullscreen main,
+    body.tv-fullscreen #gameArea {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        max-width:
+            none !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        align-items:
+            center !important;
+
+        gap:
+            0 !important;
+
+        margin:
+            0 !important;
+
+        padding:
+            0 !important;
+
+        overflow:
+            visible !important;
+
+        background:
+            #000 !important;
+    }
+
+
+    /* ---------------- PHONE CASE SECTION ---------------- */
+
+    #briefcasesSection,
+    body.tv-fullscreen #briefcasesSection {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        margin:
+            0 !important;
+
+        padding:
+            14px 4px 4px !important;
+
+        overflow:
+            visible !important;
+
+        background:
+            #050505 !important;
+    }
+
+
+    /* ---------------- PHONE 3 COLUMN GRID ---------------- */
+
+    #briefcasesContainer,
+    body.tv-fullscreen #briefcasesContainer {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        display:
+            grid !important;
+
+        grid-template-columns:
+            repeat(3,
+                minmax(0, 1fr)) !important;
+
+        grid-template-rows:
+            none !important;
+
+        grid-auto-rows:
+            auto !important;
+
+        justify-content:
+            center !important;
+
+        align-items:
+            start !important;
+
+        gap:
+            18px 4px !important;
+
+        margin:
+            0 !important;
+
+        padding:
+            0 !important;
+
+        overflow:
+            visible !important;
+    }
+
+
+    /* ---------------- PHONE CASES ---------------- */
+
+    .briefcase,
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-width:
+            0 !important;
+
+        min-height:
+            0 !important;
+
+        margin:
+            0 !important;
+
+        padding:
+            2px !important;
+
+        border-width:
+            1px !important;
+
+        border-radius:
+            6px !important;
+    }
+
+    .briefcase::before {
+        top:
+            -11px;
+
+        height:
+            11px;
+
+        border-width:
+            3px;
+
+        border-bottom:
+            0;
+    }
+
+    .briefcase::after {
+        top:
+            -6px;
+
+        height:
+            5px;
+    }
+
+    .briefcase-img,
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-img {
+        display:
+            block !important;
+
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        aspect-ratio:
+            4 / 5 !important;
+
+        object-fit:
+            cover !important;
+
+        object-position:
+            center top !important;
+    }
+
+    .briefcase-number,
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-number {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        font-size:
+            0.72em !important;
+
+        line-height:
+            1 !important;
+
+        padding:
+            3px !important;
+
+        margin-top:
+            2px !important;
+    }
+
+
+    /* ---------------- PHONE PERSONAL BOX ---------------- */
+
+    .briefcase.personal,
+    body.tv-fullscreen .briefcase.personal {
+        border:
+            3px solid #ffd700 !important;
+
+        transform:
+            scale(1.02) !important;
+
+        z-index:
+            20;
+    }
+
+
+    /* ---------------- PHONE GAME MESSAGE ---------------- */
+
+    #briefcasesInfo,
+    body.tv-fullscreen #briefcasesInfo {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        display:
+            block !important;
+
+        margin-top:
+            7px !important;
+
+        padding:
+            4px 0 !important;
+
+        overflow:
+            visible !important;
+    }
+
+    #gameMessage,
+    body.tv-fullscreen #gameMessage {
+        font-size:
+            1.05em !important;
+
+        line-height:
+            1.15 !important;
+
+        padding:
+            0 4px !important;
+    }
+
+
+    /* ---------------- PHONE PRIZES ---------------- */
+
+    #prizesSection,
+    body.tv-fullscreen #prizesSection {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        max-width:
+            none !important;
+
+        margin-top:
+            8px !important;
+
+        padding:
+            8px 5px 15px !important;
+
+        overflow:
+            visible !important;
+    }
+
+    #prizesSection h2,
+    body.tv-fullscreen #prizesSection h2 {
+        font-size:
+            1.2em !important;
+
+        margin:
+            6px 0 !important;
+    }
+
+    #prizeBoard,
+    body.tv-fullscreen #prizeBoard {
+        display:
+            grid !important;
+
+        grid-template-columns:
+            1fr 1fr !important;
+
+        gap:
+            1px 8px !important;
+    }
+
+    #prizeBoard li,
+    body.tv-fullscreen #prizeBoard li {
+        font-size:
+            0.86em !important;
+
+        line-height:
+            1.15 !important;
+
+        margin:
+            2px 0 !important;
+    }
+
+    #offersHistory,
+    body.tv-fullscreen #offersHistory {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+    }
+
+    #offersHistory li,
+    body.tv-fullscreen #offersHistory li {
+        font-size:
+            0.83em !important;
+    }
+
+
+    /* ---------------- PHONE FOOTER ---------------- */
+
+    #birthdayFooter,
+    body.tv-fullscreen #birthdayFooter {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        display:
+            block !important;
+
+        margin:
+            7px 0 0 !important;
+
+        padding:
+            8px 4px !important;
+    }
+
+    .birthdayFooterSide {
+        display:
+            none !important;
+    }
+
+    #birthdayFooterCenter {
+        width:
+            100% !important;
+
+        gap:
+            7px !important;
+    }
+
+    #birthdayFooterText {
+        font-size:
+            clamp(1.5rem,
+                8vw,
+                2.4rem) !important;
+    }
+
+
+    /* ---------------- PHONE MODAL ---------------- */
+
+    .modal,
+    body.tv-fullscreen .modal {
+        width:
+            100vw !important;
+
+        height:
+            100vh !important;
+    }
+
+    .modal-content,
+    body.tv-fullscreen .modal-content {
+        width:
+            92% !important;
+
+        max-width:
+            92% !important;
+
+        max-height:
+            85vh !important;
+
+        padding:
+            15px 10px !important;
+    }
+
+    .cases-to-open {
+        font-size:
+            clamp(22px,
+                7vw,
+                32px) !important;
+    }
+
+    .bank-offer {
+        font-size:
+            clamp(28px,
+                9vw,
+                42px) !important;
+    }
+
+
+    /* ---------------- PHONE REVEAL ---------------- */
+
+    body > .center-open,
+    body > .personal-box-reveal,
+    body.tv-fullscreen > .center-open,
+    body.tv-fullscreen > .personal-box-reveal {
+        width:
+            100vw !important;
+
+        height:
+            100vh !important;
+
+        position:
+            fixed !important;
+
+        inset:
+            0 !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        justify-content:
+            center !important;
+
+        align-items:
+            center !important;
+
+        overflow:
+            hidden !important;
+    }
+
+    body > .center-open > .center-img,
+    body.tv-fullscreen > .center-open > .center-img {
+        width:
+            auto !important;
+
+        height:
+            auto !important;
+
+        max-width:
+            72vw !important;
+
+        max-height:
+            58vh !important;
+    }
+
+    body > .personal-box-reveal > .center-img,
+    body.tv-fullscreen > .personal-box-reveal > .center-img {
+        width:
+            auto !important;
+
+        height:
+            auto !important;
+
+        max-width:
+            75vw !important;
+
+        max-height:
+            58vh !important;
+    }
+
+    body > .personal-box-reveal > .personal-box-message {
+        font-size:
+            clamp(22px,
+                7vw,
+                32px) !important;
+
+        white-space:
+            normal !important;
+
+        padding:
+            0 10px !important;
+    }
+
+    body > .center-open > .center-amount,
+    body > .personal-box-reveal > .center-amount {
+        font-size:
+            clamp(20px,
+                6vw,
+                30px) !important;
+
+        padding:
+            6px 14px !important;
+    }
+
+
+    /* ---------------- PHONE INTRO ---------------- */
+
+    #introVideoContainer {
+        width:
+            100vw !important;
+
+        height:
+            100vh !important;
+    }
+
+    #introVideo {
+        width:
+            100% !important;
+
+        height:
+            100% !important;
+
+        object-fit:
+            contain !important;
+
+        background:
+            #000 !important;
+    }
+
+    #introButtons {
+        bottom:
+            20px !important;
+
+        width:
+            96% !important;
+
+        gap:
+            5px !important;
+
+        flex-wrap:
+            wrap !important;
+    }
+
+    #introButtons button {
+        font-size:
+            0.8em !important;
+
+        padding:
+            7px 9px !important;
+
+        margin:
+            2px !important;
+    }
+}
+
+
+/* ==========================================================
+   VERY SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 350px) {
+
+    #headerPhoto {
+        width:
+            80px !important;
+
+        height:
+            80px !important;
+    }
+
+    #gameTitle,
+    body.tv-fullscreen #gameTitle {
+        font-size:
+            1.25rem !important;
+    }
+
+    #birthdayEdition {
+        font-size:
+            1.3rem !important;
+    }
+
+    #briefcasesContainer,
+    body.tv-fullscreen #briefcasesContainer {
+        grid-template-columns:
+            repeat(3,
+                minmax(0, 1fr)) !important;
+
+        gap:
+            16px 3px !important;
+    }
+
+    .briefcase-number {
+        font-size:
+            0.66em !important;
+    }
+}
+
+
+/* ==========================================================
+   40TH BIRTHDAY EDITION
+   Compatibility + decorative theme for the updated index.html
+   ========================================================== */
+
+body.birthday-40-edition {
+    --gold: #d4af37;
+    --gold-bright: #ffd700;
+    --gold-light: #fff0a6;
+    --gold-dark: #8a6412;
+
+    padding: 0;
+
+    background:
+        radial-gradient(circle at 50% 0%, rgba(92, 62, 12, 0.24), transparent 32%),
+        radial-gradient(circle at 50% 55%, #171007 0%, #070707 40%, #000 78%);
+
+    overflow-x: hidden;
+}
+
+
+/* ---------------- TOP / BOTTOM ART ---------------- */
+
+.birthday-40-edition .birthday-scenery {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.birthday-40-edition .birthday-top-scenery {
+    height: clamp(82px, 10vw, 145px);
+    background-image: url("images/christmas-top.webp");
+    border-bottom: 2px solid var(--gold);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.85),
+        0 0 18px rgba(255, 215, 0, 0.2);
+}
+
+.birthday-50-edition .birthday-bottom-scenery {
+    height: clamp(70px, 8vw, 120px);
+    margin-top: 0;
+    background-image: url("images/christmas-bottom.webp");
+    background-position: center bottom;
+    border-top: 1px solid rgba(212, 175, 55, 0.65);
+}
+
+
+/* ---------------- UPDATED HEADER ---------------- */
+
+.birthday-40-edition > header {
+    position: relative;
+    width: 100%;
+    margin: 0 0 7px;
+    padding: 7px 10px 5px;
+
+    background:
+        radial-gradient(circle at center, #241706 0%, #080706 50%, #000 100%);
+
+    border-bottom: 2px solid var(--gold);
+    overflow: visible;
+}
+
+.birthday-40-edition #headerContent {
+    grid-template-columns:
+        minmax(135px, 0.8fr) 160px minmax(410px, 2.8fr) minmax(135px, 0.8fr) 150px;
+}
+
+.birthday-40-edition .birthday-person-frame {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    background:
+        linear-gradient(135deg,
+            #fff7bc,
+            #ffd700 22%,
+            #8a6412 52%,
+            #fff0a6 78%,
+            #d4af37);
+
+    border: 3px solid var(--gold-bright);
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 10px #ffd700,
+        0 0 25px rgba(255, 215, 0, 0.55),
+        inset 0 0 10px rgba(255, 255, 255, 0.5);
+
+    z-index: 5;
+}
+
+.birthday-40-edition .birthday-person-frame::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    border: 1px solid rgba(255, 215, 0, 0.55);
+    border-radius: 17px;
+    pointer-events: none;
+}
+
+.birthday-40-edition #headerPhoto {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    object-position: center top;
+    border: none;
+    border-radius: 9px;
+}
+
+.birthday-40-edition #headerTitles {
+    min-width: 0;
+}
+
+.birthday-40-edition .game-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    width: 100%;
+    margin: 0;
+    padding: 8px 12px;
+
+    font-size: clamp(2rem, 3vw, 3.7rem);
+    font-weight: 1000;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+
+    background:
+        linear-gradient(180deg,
+            #fff8c9 0%,
+            #ffe071 22%,
+            #d99b1c 55%,
+            #fff0a4 80%,
+            #b87700 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter:
+        drop-shadow(0 3px 1px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 9px rgba(255, 215, 0, 0.25));
+
+    animation: titleShine 3s ease-in-out infinite;
+}
+
+.birthday-40-edition .title-or {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    color: #000;
+    -webkit-text-fill-color: #000;
+
+    background:
+        linear-gradient(180deg, #fff3a0, #d4af37);
+
+    border: 1px solid #fff0a6;
+    border-radius: 7px;
+
+    font-size: 0.42em;
+    font-weight: 1000;
+    line-height: 1;
+}
+
+.birthday-40-edition .birthday-subtitle {
+    margin-top: 7px;
+
+    color: #fff1b8;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: clamp(1.7rem, 2.5vw, 3rem);
+    font-weight: 400;
+    line-height: 1;
+
+    text-shadow:
+        0 0 6px #ffd700,
+        0 0 15px rgba(255, 196, 0, 0.85),
+        0 0 28px rgba(255, 170, 0, 0.45);
+}
+
+.birthday-40-edition .birthday-header-message {
+    min-height: 115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 7px;
+
+    text-align: center;
+
+    color: #f5cf68;
+
+    background:
+        linear-gradient(145deg, #17120a, #030303);
+
+    border: 2px solid var(--gold);
+    border-radius: 7px;
+
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.25),
+        inset 0 0 15px rgba(255, 215, 0, 0.06);
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: clamp(0.8rem, 1vw, 1.15rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.birthday-40-edition .birthday-message-left {
+    transform: rotate(-1deg);
+}
+
+.birthday-40-edition .birthday-message-right {
+    transform: rotate(1deg);
+}
+
+
+/* ---------------- MUSIC BUTTON ---------------- */
+
+.birthday-40-edition #musicToggleBtn {
+    width: 100%;
+    margin: 0;
+    padding: 8px 10px;
+
+    background:
+        linear-gradient(180deg, #f6d35e, #bd8f17);
+
+    border: 1px solid #ffe47a;
+    border-radius: 7px;
+
+    color: #000;
+
+    font-size: clamp(0.72rem, 0.85vw, 0.95rem);
+    font-weight: 700;
+    line-height: 1.05;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.55);
+}
+
+.birthday-40-edition #musicToggleBtn:hover {
+    background:
+        linear-gradient(180deg, #fff2a0, #ffd700);
+}
+
+
+/* ---------------- MAIN BOARD ---------------- */
+
+.birthday-40-edition main {
+    padding: 0 6px;
+}
+
+.birthday-40-edition #briefcasesSection {
+    background:
+        radial-gradient(circle at 50% 10%, rgba(80, 54, 8, 0.17), transparent 38%),
+        linear-gradient(180deg, rgba(16, 16, 16, 0.97), rgba(0, 0, 0, 0.99));
+}
+
+.birthday-40-edition #prizesSection {
+    background:
+        radial-gradient(circle at top, rgba(94, 62, 8, 0.22), transparent 30%),
+        linear-gradient(180deg, #101010, #020202);
+}
+
+.birthday-40-edition .prize-divider {
+    width: 100%;
+    height: 2px;
+    margin: 8px 0;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #8f6712,
+            #ffd700,
+            #fff2a4,
+            #ffd700,
+            #8f6712,
+            transparent);
+
+    box-shadow:
+        0 0 8px rgba(255, 215, 0, 0.55);
+}
+
+
+/* ---------------- 40TH FOOTER ---------------- */
+
+.birthday-40-edition .birthday-bottom-area {
+    width: calc(100% - 12px);
+    max-width: 1600px;
+
+    margin: 7px auto 0;
+    padding: 8px 14px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(150px, 190px) 1fr minmax(150px, 190px);
+
+    align-items: center;
+    gap: 12px;
+
+    background:
+        radial-gradient(circle at center, rgba(87, 56, 7, 0.25), transparent 38%),
+        linear-gradient(180deg, #111, #020202);
+
+    border-top: 2px solid var(--gold);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.birthday-40-edition .birthday-cheers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    color: #ffe8a0;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(1.7rem, 2.8vw, 3rem);
+    line-height: 1;
+    text-align: center;
+
+    text-shadow:
+        0 0 7px #ffd700,
+        0 0 18px rgba(255, 180, 0, 0.7);
+}
+
+.birthday-40-edition .birthday-heart,
+.birthday-40-edition .birthday-sparkle {
+    color: #ffd700;
+    font-size: clamp(1.2rem, 1.8vw, 2rem);
+}
+
+.birthday-40-edition .birthday-bottom-message {
+    min-height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6px 8px;
+
+    color: #efcb68;
+    text-align: center;
+
+    font-family:
+        "Segoe Print",
+        cursive;
+
+    font-size: clamp(0.7rem, 0.9vw, 0.95rem);
+    line-height: 1.15;
+
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    background: #090909;
+}
+
+
+/* ==========================================================
+   40TH DESKTOP / TV FULLSCREEN
+   ========================================================== */
+
+@media (min-width: 769px) {
+
+    body.birthday-40-edition.tv-fullscreen {
+        display: grid;
+
+        /* Top art | Header | Game | Footer | Bottom art */
+        grid-template-rows:
+            7vh 15vh minmax(0, 1fr) 6vh 7vh;
+
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden !important;
+        background: #000;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
+        display: block !important;
+        width: 100% !important;
+        height: 7vh !important;
+        min-height: 7vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-image: url("images/christmas-top.webp") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        border-bottom: 2px solid #d4af37 !important;
+        overflow: hidden !important;
+        box-shadow: 0 3px 12px rgba(255, 215, 0, 0.22);
+        z-index: 2;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+        display: block !important;
+        width: 100% !important;
+        height: 7vh !important;
+        min-height: 7vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-size: cover !important;
+        background-position: center bottom !important;
+        background-repeat: no-repeat !important;
+        border-top: 2px solid #d4af37 !important;
+        overflow: hidden !important;
+        box-shadow: 0 -3px 12px rgba(255, 215, 0, 0.18);
+        z-index: 2;
+    }
+
+    body.birthday-40-edition.tv-fullscreen > header {
+        width: 100%;
+        height: 15vh;
+        min-height: 0;
+
+        margin: 0;
+        padding: 0.4vh 0.7vw;
+
+        overflow: visible;
+    }
+
+    body.birthday-40-edition.tv-fullscreen #headerContent {
+        width: 100%;
+        height: calc(100% - 5px);
+        min-height: 0;
+
+        grid-template-columns:
+            minmax(100px, 0.75fr) minmax(100px, 8vw) minmax(360px, 3fr) minmax(100px, 0.75fr) minmax(110px, 9vw);
+
+        gap: 0.7vw;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-person-frame {
+        padding: 0.3vh;
+        border-width: 3px;
+    }
+
+    body.birthday-40-edition.tv-fullscreen #headerPhoto {
+        width: auto;
+        height: 13vh;
+        max-width: 9vw;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .game-title {
+        padding: 0 8px;
+
+        font-size:
+            clamp(24px,
+                2.55vw,
+                48px);
+
+        line-height: 1;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-subtitle {
+        margin-top: 0.5vh;
+
+        font-size:
+            clamp(20px,
+                2vw,
+                38px);
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-header-message {
+        min-height: 0;
+        height: 12vh;
+
+        padding: 0.4vh 0.4vw;
+
+        font-size:
+            clamp(9px,
+                0.85vw,
+                16px);
+    }
+
+    body.birthday-40-edition.tv-fullscreen #musicToggleBtn {
+        padding: 0.45vh 0.5vw;
+
+        font-size:
+            clamp(8px,
+                0.67vw,
+                12px);
+    }
+
+    body.birthday-40-edition.tv-fullscreen main {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-width: none;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr) minmax(220px, 18vw);
+
+        gap: 0.65vw;
+
+        margin: 0;
+        padding: 1.5vh 0.65vw 0.5vh;
+
+        overflow: hidden !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-area {
+        width: 100%;
+        height: 6vh;
+        max-width: none;
+
+        margin: 0;
+        padding: 0.3vh 0.7vw;
+
+        grid-template-columns:
+            minmax(120px, 11vw) 1fr minmax(120px, 11vw);
+
+        overflow: hidden;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-cheers {
+        font-size:
+            clamp(21px,
+                2.2vw,
+                42px);
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-message {
+        min-height: 0;
+        height: 4.7vh;
+
+        padding: 0.2vh 0.3vw;
+
+        font-size:
+            clamp(8px,
+                0.65vw,
+                12px);
+    }
+}
+
+
+/* ==========================================================
+   40TH TABLET
+   ========================================================== */
+
+@media (max-width: 1200px) and (min-width: 769px) {
+
+    .birthday-40-edition #headerContent {
+        grid-template-columns:
+            110px 125px minmax(320px, 1fr) 120px;
+
+        gap: 8px;
+    }
+
+    .birthday-40-edition .birthday-message-right {
+        display: none;
+    }
+
+    .birthday-40-edition .game-title {
+        font-size:
+            clamp(1.8rem,
+                3vw,
+                2.8rem);
+    }
+}
+
+
+/* ==========================================================
+   40TH MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    body.birthday-40-edition {
+        padding: 0 !important;
+    }
+
+    .birthday-40-edition .birthday-top-scenery {
+        height: 78px;
+        background-size: cover;
+    }
+
+    .birthday-40-edition > header,
+    body.birthday-40-edition.tv-fullscreen > header {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin-bottom: 5px !important;
+        padding: 7px 4px !important;
+    }
+
+    .birthday-40-edition #headerContent,
+    body.birthday-40-edition.tv-fullscreen #headerContent {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            92px minmax(0, 1fr) !important;
+
+        gap: 7px !important;
+
+        align-items: center !important;
+    }
+
+    .birthday-40-edition .birthday-message-left,
+    .birthday-40-edition .birthday-message-right {
+        display: none !important;
+    }
+
+    .birthday-40-edition .birthday-person-frame {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .birthday-40-edition #headerPhoto {
+        width: 82px !important;
+        height: 82px !important;
+    }
+
+    .birthday-40-edition #headerTitles {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .birthday-40-edition .game-title {
+        gap: 5px;
+
+        padding: 2px 0;
+
+        font-size:
+            clamp(1.2rem,
+                5.6vw,
+                1.75rem) !important;
+
+        line-height: 1.02;
+    }
+
+    .birthday-40-edition .birthday-subtitle {
+        margin-top: 5px;
+
+        font-size:
+            clamp(1.2rem,
+                5.5vw,
+                1.8rem);
+    }
+
+    .birthday-40-edition #headerButtons {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 5px !important;
+
+        width: 100% !important;
+    }
+
+    .birthday-40-edition #fullScreenBtn,
+    .birthday-40-edition #watchIntroBtn,
+    .birthday-40-edition #musicToggleBtn {
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 7px 4px !important;
+
+        font-size: 0.7rem !important;
+    }
+
+    .birthday-40-edition main {
+        padding: 0 3px !important;
+    }
+
+    .birthday-40-edition .birthday-bottom-area,
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-area {
+        width: 100% !important;
+        height: auto !important;
+
+        display: block !important;
+
+        margin: 7px 0 0 !important;
+        padding: 8px 4px !important;
+    }
+
+    .birthday-40-edition .birthday-bottom-message {
+        display: none !important;
+    }
+
+    .birthday-40-edition .birthday-cheers {
+        width: 100%;
+
+        gap: 7px;
+
+        font-size:
+            clamp(1.5rem,
+                8vw,
+                2.4rem) !important;
+    }
+
+    .birthday-40-edition .birthday-bottom-scenery {
+        height: 70px;
+    }
+}
+
+
+/* ==========================================================
+   40TH VERY SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 350px) {
+
+    .birthday-40-edition #headerPhoto {
+        width: 74px !important;
+        height: 74px !important;
+    }
+
+    .birthday-40-edition .game-title {
+        font-size: 1.08rem !important;
+    }
+
+    .birthday-40-edition .birthday-subtitle {
+        font-size: 1.18rem !important;
+    }
+}
+
+
+/* ==========================================================
+   40TH BIRTHDAY — FULLSCREEN ART FIX
+   IMPORTANT: This does NOT resize the game/cards/header.
+   It only fixes how the top, board, and bottom artwork render.
+   ========================================================== */
+
+body.birthday-40-edition .birthday-top-scenery {
+    background-image: url("images/christmas-top.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+body.birthday-40-edition #briefcasesSection {
+    background-image:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.30) 0%,
+            rgba(0, 0, 0, 0.44) 55%,
+            rgba(0, 0, 0, 0.62) 100%),
+        url("images/christmas-top.webp") !important;
+
+    background-repeat:
+        no-repeat,
+        no-repeat !important;
+
+    background-position:
+        center,
+        center center !important;
+
+    background-size:
+        cover,
+        cover !important;
+}
+
+body.birthday-40-edition .birthday-bottom-scenery {
+    background-image: url("images/christmas-bottom.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    background-size: cover !important;
+}
+
+
+/* FULLSCREEN — KEEP THE EXISTING GOOD SIZING */
+@media (min-width: 769px) {
+
+    body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
+        background-image: url("images/christmas-top.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen #briefcasesSection {
+        background-image:
+            linear-gradient(180deg,
+                rgba(0, 0, 0, 0.24) 0%,
+                rgba(0, 0, 0, 0.38) 55%,
+                rgba(0, 0, 0, 0.56) 100%),
+            url("images/christmas-top.webp") !important;
+
+        background-repeat:
+            no-repeat,
+            no-repeat !important;
+
+        background-position:
+            center,
+            center center !important;
+
+        background-size:
+            cover,
+            cover !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center bottom !important;
+        background-size: cover !important;
+        filter: saturate(1.08) contrast(1.04);
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    body.birthday-40-edition .birthday-top-scenery {
+        background-image: url("images/christmas-top.webp") !important;
+        background-position: center top !important;
+        background-size: cover !important;
+    }
+
+    body.birthday-40-edition #briefcasesSection {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.42),
+                rgba(0, 0, 0, 0.64)),
+            url("images/christmas-top.webp") !important;
+
+        background-position:
+            center,
+            center center !important;
+
+        background-size:
+            cover,
+            cover !important;
+    }
+
+    body.birthday-40-edition .birthday-bottom-scenery {
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-position: center bottom !important;
+        background-size: cover !important;
+    }
+}
+
+
+/* ==========================================================
+   FINAL 40TH BIRTHDAY ARTWORK PLACEMENT FIX
+   Keeps all existing sizing/layout.
+   ========================================================== */
+
+body.birthday-40-edition .birthday-top-scenery {
+    background-image: url("images/christmas-top.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+body.birthday-40-edition #briefcasesSection {
+    background-image:
+        radial-gradient(circle at 50% 8%, rgba(212, 175, 55, .10) 0%, rgba(212, 175, 55, .035) 28%, transparent 48%),
+        linear-gradient(180deg, #11100d 0%, #090806 48%, #020202 100%) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+body.birthday-40-edition .birthday-bottom-scenery {
+    background-image: url("images/christmas-bottom.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    background-size: 100% 100% !important;
+    filter: none !important;
+}
+
+@media (min-width: 769px) {
+    body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
+        background-image: url("images/christmas-top.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen #briefcasesSection {
+        background-image:
+            radial-gradient(circle at 50% 8%, rgba(212, 175, 55, .10) 0%, rgba(212, 175, 55, .035) 28%, transparent 48%),
+            linear-gradient(180deg, #11100d 0%, #090806 48%, #020202 100%) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: cover !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center bottom !important;
+        background-size: 100% 100% !important;
+        filter: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body.birthday-40-edition .birthday-top-scenery {
+        background-image: url("images/christmas-top.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
+        background-size: cover !important;
+    }
+
+    body.birthday-40-edition #briefcasesSection {
+        background-image:
+            radial-gradient(circle at 50% 8%, rgba(212, 175, 55, .09) 0%, transparent 45%),
+            linear-gradient(180deg, #11100d 0%, #080705 50%, #020202 100%) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: cover !important;
+    }
+
+    body.birthday-40-edition .birthday-bottom-scenery {
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center bottom !important;
+        background-size: 100% 100% !important;
+        filter: none !important;
+    }
+}
+
+
+/* ==========================================================
+   FINAL DISPLAY POLISH — 40TH BIRTHDAY
+   Preserve existing layout. Fix face crop + bottom artwork.
+   ========================================================== */
+
+body.birthday-40-edition .briefcase img,
+body.birthday-40-edition .briefcase-image,
+body.birthday-40-edition .briefcase img.photo {
+    object-fit: cover !important;
+    object-position: center 18% !important;
+}
+
+body.birthday-40-edition .birthday-bottom-scenery {
+    background-image: url("images/christmas-bottom.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    filter: none !important;
+    height: 175px !important;
+    min-height: 175px !important;
+}
+
+@media (min-width: 769px) {
+
+    body.birthday-40-edition.tv-fullscreen .briefcase img,
+    body.birthday-40-edition.tv-fullscreen .briefcase-image,
+    body.birthday-40-edition.tv-fullscreen .briefcase img.photo {
+        object-fit: cover !important;
+        object-position: center 18% !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        filter: none !important;
+        height: 145px !important;
+        min-height: 145px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-height: 850px) {
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+        height: 115px !important;
+        min-height: 115px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body.birthday-40-edition .briefcase img,
+    body.birthday-40-edition .briefcase-image,
+    body.birthday-40-edition .briefcase img.photo {
+        object-fit: cover !important;
+        object-position: center 15% !important;
+    }
+
+    body.birthday-40-edition .birthday-bottom-scenery {
+        height: 125px !important;
+        min-height: 125px !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+}
+
+
+/* ==========================================================
+   40TH BIRTHDAY — FULLSCREEN EQUAL PHOTO ROWS FIX
+   18 photos = 7 + 7 + 4. The old fullscreen CSS defined only
+   TWO grid rows, so the browser created a taller implicit
+   third row. This forces all three rows to the same height.
+   ========================================================== */
+
+@media (min-width: 769px) {
+
+    body.birthday-40-edition.tv-fullscreen #briefcasesContainer {
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+        grid-auto-rows: minmax(0, 1fr) !important;
+
+        align-items: stretch !important;
+        align-content: stretch !important;
+
+        min-height: 0 !important;
+        height: 100% !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        align-self: stretch !important;
+        justify-self: stretch !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-img {
+        width: 100% !important;
+        height: calc(100% - 3.2vh) !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        object-fit: cover !important;
+        object-position: center 18% !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-number {
+        flex: 0 0 2.7vh !important;
+        width: 100% !important;
+        height: 2.7vh !important;
+        min-height: 2.7vh !important;
+        max-height: 2.7vh !important;
+    }
+}
+
+/* ==========================================================
+   CHRISTMAS EDITION — VISUAL OVERRIDES ONLY
+   Keeps the existing layout, sizing, fullscreen behavior,
+   game logic, IDs, and JavaScript unchanged.
+   ========================================================== */
+
+body.birthday-40-edition {
+    --gold: #d7aa36;
+    --gold-bright: #ffd86a;
+    --gold-light: #fff0bd;
+    --gold-dark: #8a6112;
+    --christmas-red: #b51f24;
+    --christmas-red-dark: #650b12;
+    --christmas-green: #0b4a31;
+    --christmas-green-dark: #03271b;
+
+    background:
+        radial-gradient(circle at 18% 4%, rgba(197, 34, 39, 0.18), transparent 22%),
+        radial-gradient(circle at 82% 4%, rgba(15, 92, 57, 0.24), transparent 24%),
+        radial-gradient(circle at 50% 48%, #122319 0%, #06120d 42%, #020705 78%);
+}
+
+/* Christmas scenery made with CSS so no extra image files are required. */
+.birthday-40-edition .birthday-top-scenery,
+.birthday-40-edition .birthday-bottom-scenery,
+body.birthday-40-edition.tv-fullscreen .birthday-top-scenery,
+body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+    background-image:
+        radial-gradient(circle at 7% 52%, rgba(255, 218, 111, 0.98) 0 3px, transparent 4px),
+        radial-gradient(circle at 14% 28%, rgba(255, 241, 189, 0.95) 0 2px, transparent 3px),
+        radial-gradient(circle at 22% 70%, rgba(205, 40, 45, 0.92) 0 5px, transparent 6px),
+        radial-gradient(circle at 78% 66%, rgba(205, 40, 45, 0.92) 0 5px, transparent 6px),
+        radial-gradient(circle at 87% 30%, rgba(255, 241, 189, 0.95) 0 2px, transparent 3px),
+        radial-gradient(circle at 94% 54%, rgba(255, 218, 111, 0.98) 0 3px, transparent 4px),
+        linear-gradient(115deg, transparent 0 12%, rgba(9, 83, 49, 0.88) 13% 20%, transparent 21% 79%, rgba(9, 83, 49, 0.88) 80% 87%, transparent 88%),
+        linear-gradient(180deg, #123e2c 0%, #08291d 45%, #04150f 100%) !important;
+    background-size: auto !important;
+    background-position: center !important;
+    border-color: #d7aa36 !important;
+    box-shadow: 0 0 20px rgba(255, 210, 90, 0.2) !important;
+}
+
+.birthday-40-edition > header {
+    background:
+        radial-gradient(circle at center, rgba(123, 17, 23, 0.42) 0%, rgba(7, 61, 39, 0.74) 42%, #03130d 100%);
+    border-bottom-color: #d7aa36;
+}
+
+.birthday-40-edition .game-title {
+    background: linear-gradient(180deg, #fff7c7 0%, #ffd86a 24%, #d7aa36 55%, #fff1b0 78%, #a96d12 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter:
+        drop-shadow(0 3px 1px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 10px rgba(255, 216, 106, 0.3));
+}
+
+.birthday-40-edition .title-or {
+    color: #fff6d7;
+    -webkit-text-fill-color: #fff6d7;
+    background: linear-gradient(180deg, #cf3137, #790d15);
+    border-color: #f2c75c;
+    box-shadow: 0 0 8px rgba(255, 211, 93, 0.28);
+}
+
+.birthday-40-edition .birthday-subtitle {
+    color: #fff3c7;
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.4),
+        0 0 14px rgba(218, 39, 45, 0.8),
+        0 0 25px rgba(255, 204, 75, 0.35);
+}
+
+.birthday-40-edition .birthday-header-message {
+    color: #fff1bd;
+    background:
+        linear-gradient(145deg, rgba(16, 85, 54, 0.96), rgba(3, 35, 23, 0.98));
+    border-color: #d7aa36;
+    box-shadow:
+        0 0 12px rgba(255, 211, 93, 0.2),
+        inset 0 0 18px rgba(255,255,255,0.04);
+}
+
+.birthday-40-edition .birthday-message-right {
+    background:
+        linear-gradient(145deg, rgba(160, 23, 29, 0.96), rgba(82, 7, 13, 0.98));
+}
+
+.birthday-40-edition .birthday-person-frame {
+    background: linear-gradient(135deg, #fff3ba, #d7aa36 25%, #8b151b 52%, #0b5b3b 76%, #f0c75e);
+    border-color: #ffd86a;
+    box-shadow:
+        0 0 10px rgba(255, 216, 106, 0.9),
+        0 0 24px rgba(173, 27, 34, 0.28),
+        inset 0 0 10px rgba(255,255,255,0.45);
+}
+
+.birthday-40-edition #fullScreenBtn,
+.birthday-40-edition #watchIntroBtn,
+.birthday-40-edition #musicToggleBtn {
+    background: linear-gradient(180deg, #f3d36e, #bd8b1d);
+    border-color: #ffe7a0;
+}
+
+.birthday-40-edition #briefcasesSection {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(177, 30, 36, 0.10), transparent 30%),
+        linear-gradient(180deg, rgba(4, 47, 30, 0.98), rgba(2, 18, 12, 0.99));
+    border-color: rgba(215, 170, 54, 0.55);
+}
+
+/* Red/green photo cards with gold trim, while preserving the exact card dimensions. */
+.birthday-40-edition .briefcase:not(.center-open):not(.personal-box-reveal) {
+    background: linear-gradient(145deg, #0e5a3a 0%, #063521 48%, #0a4b31 100%);
+    border: 2px solid #d7aa36;
+    box-shadow:
+        0 3px 6px rgba(0,0,0,0.92),
+        0 0 7px rgba(255, 211, 93, 0.2),
+        inset 0 0 7px rgba(255,255,255,0.05);
+}
+
+.birthday-40-edition .briefcase:nth-child(odd):not(.center-open):not(.personal-box-reveal) {
+    background: linear-gradient(145deg, #c1282e 0%, #7b0e16 50%, #a51921 100%);
+}
+
+.birthday-40-edition .briefcase:not(.center-open):not(.personal-box-reveal)::before {
+    border-color: #d7aa36;
+    background: #6f4d12;
+}
+
+.birthday-40-edition .briefcase:not(.center-open):not(.personal-box-reveal)::after {
+    background: #d7aa36;
+}
+
+.birthday-40-edition .briefcase-number {
+    color: #171006;
+    background: linear-gradient(180deg, #fff1b5 0%, #e0b64d 55%, #b77d19 100%);
+    border-top-color: #ffe89a;
+}
+
+.birthday-40-edition .briefcase.personal {
+    box-shadow:
+        0 0 0 2px #fff0ad,
+        0 0 18px rgba(255, 216, 106, 0.85),
+        0 4px 9px rgba(0,0,0,0.95) !important;
+}
+
+.birthday-40-edition #prizesSection {
+    background:
+        radial-gradient(circle at top, rgba(190, 33, 39, 0.18), transparent 32%),
+        linear-gradient(180deg, #0b3c28, #031b12);
+    border-color: rgba(215, 170, 54, 0.7);
+}
+
+.birthday-40-edition #prizesSection h2 {
+    color: #fff0b4;
+    text-shadow: 0 0 8px rgba(255, 213, 92, 0.45);
+}
+
+.birthday-40-edition .birthday-bottom-area {
+    background:
+        radial-gradient(circle at center, rgba(191, 31, 38, 0.2), transparent 38%),
+        linear-gradient(180deg, #0b3b28, #031b12);
+    border-color: #d7aa36;
+}
+
+.birthday-40-edition .birthday-bottom-message {
+    color: #fff0bd;
+    border-color: rgba(215, 170, 54, 0.8);
+    background: linear-gradient(145deg, rgba(137, 17, 24, 0.86), rgba(58, 6, 10, 0.94));
+}
+
+.birthday-40-edition .birthday-cheers {
+    color: #fff2c7;
+    text-shadow:
+        0 0 7px rgba(255, 216, 106, 0.85),
+        0 0 18px rgba(184, 27, 34, 0.45);
+}
+
+.birthday-40-edition .birthday-heart,
+.birthday-40-edition .birthday-sparkle {
+    color: #d92e35;
+    text-shadow: 0 0 6px rgba(255, 215, 105, 0.7);
+}
+
+/* Christmas offer buttons; no game behavior changes. */
+.birthday-40-edition button.deal,
+.birthday-40-edition .deal {
+    background: linear-gradient(180deg, #168455, #075334) !important;
+    border-color: #e6bd52 !important;
+    color: #fff8dd !important;
+}
+
+.birthday-40-edition button.decline,
+.birthday-40-edition .decline {
+    background: linear-gradient(180deg, #d1353b, #8a1119) !important;
+    border-color: #e6bd52 !important;
+    color: #fff8dd !important;
+}
+
+
+/* ==========================================================
+   CHRISTMAS EDITION — FINAL GENERAL-PARTY + SCENERY FIX
+   This block intentionally comes LAST so it overrides the
+   inherited birthday/anniversary fullscreen rules above.
+   ========================================================== */
+
+/* Use the actual Christmas artwork in normal view. */
+body.birthday-40-edition .birthday-top-scenery {
+    display: block !important;
+    width: 100% !important;
+    background-image: url("images/christmas-top.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+body.birthday-40-edition .birthday-bottom-scenery {
+    display: block !important;
+    width: 100% !important;
+    background-image: url("images/christmas-bottom.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+/* No featured person in the general Christmas game. */
+body.birthday-40-edition .birthday-person-frame,
+body.birthday-40-edition #birthdayPerson,
+body.birthday-40-edition #headerPhoto {
+    display: none !important;
+}
+
+/* Reflow the header from 5 columns to 4:
+   left Christmas sign | title | right Christmas sign | controls */
+body.birthday-40-edition #headerContent {
+    grid-template-columns:
+        minmax(150px, 0.9fr)
+        minmax(500px, 3.6fr)
+        minmax(150px, 0.9fr)
+        minmax(145px, 0.8fr) !important;
+}
+
+/* FULLSCREEN: reserve real rows for the Christmas top and bottom artwork. */
+@media (min-width: 769px) {
+
+    body.birthday-40-edition.tv-fullscreen {
+        grid-template-rows:
+            9vh
+            15vh
+            minmax(0, 1fr)
+            5.5vh
+            8vh !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
+        display: block !important;
+        grid-row: 1 !important;
+        width: 100vw !important;
+        height: 9vh !important;
+        min-height: 9vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-image: url("images/christmas-top.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        overflow: hidden !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen > header {
+        grid-row: 2 !important;
+        height: 15vh !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen #headerContent {
+        height: 100% !important;
+        min-height: 0 !important;
+        grid-template-columns:
+            minmax(125px, 0.85fr)
+            minmax(430px, 3.8fr)
+            minmax(125px, 0.85fr)
+            minmax(120px, 0.8fr) !important;
+        gap: 0.8vw !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen main {
+        grid-row: 3 !important;
+        min-height: 0 !important;
+        height: 100% !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-area {
+        grid-row: 4 !important;
+        min-height: 0 !important;
+        height: 5.5vh !important;
+        margin: 0 !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+        display: block !important;
+        grid-row: 5 !important;
+        width: 100vw !important;
+        height: 8vh !important;
+        min-height: 8vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-image: url("images/christmas-bottom.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        overflow: hidden !important;
+    }
+}
+
+/* Keep the general Christmas header clean on smaller screens too. */
+@media (max-width: 768px) {
+    body.birthday-40-edition #headerContent {
+        grid-template-columns: 1fr !important;
+    }
+}
