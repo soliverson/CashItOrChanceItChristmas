@@ -438,13 +438,15 @@ function getBankersOffer(values) {
   let offer = average * percentage;
 
 
-  // Keep early offers reasonable.
+  // Keep early offers reasonable. The caps scale with the top
+  // prize chosen in config.js (4% and 6% of it, which is
+  // $20 and $30 when the top prize is $500).
   if (currentRound === 0) {
-    offer = Math.min(offer, 20);
+    offer = Math.min(offer, maxPrize * 0.04);
   }
 
   if (currentRound === 1) {
-    offer = Math.min(offer, 30);
+    offer = Math.min(offer, maxPrize * 0.06);
   }
 
 

@@ -2063,7 +2063,7 @@ body > .personal-box-reveal > .personal-box-message {
                 minmax(0, 1fr));
 
         grid-template-rows:
-            repeat(2,
+            repeat(3,
                 minmax(0, 1fr));
 
         gap:
@@ -4692,4 +4692,39 @@ body.birthday-40-edition #headerContent {
 
 .etsy-shop-btn:active {
   transform: translateY(1px);
+}
+
+/* ==========================================================
+   CHRISTMAS EDITION — NORMAL (NON-FULLSCREEN) BOTTOM ART FIX
+   Keep this block LAST in the file.
+
+   Problem: in a normal browser window the bottom artwork was
+   a fixed 175px tall, so it showed much more of the picture
+   (extra strip and line at the top) than fullscreen does.
+
+   Fix: size the artwork by its WIDTH, using the same
+   proportions as the fullscreen view that already looks
+   right (1920 wide x 145 tall). It now shows the same crop
+   of the picture at any window width.
+   ========================================================== */
+
+@media (min-width: 769px) {
+
+    body.birthday-40-edition:not(.tv-fullscreen) .birthday-bottom-scenery {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 1920 / 145 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background-image: url("Game Files/images/christmas-bottom.webp") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        filter: none !important;
+        overflow: hidden !important;
+    }
 }
