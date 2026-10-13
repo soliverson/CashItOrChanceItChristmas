@@ -2117,7 +2117,7 @@ body > .personal-box-reveal > .personal-box-message {
         object-fit: cover;
 
         object-position:
-            center top;
+            center 22%;
     }
 
     body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-number {
@@ -4726,5 +4726,31 @@ body.birthday-40-edition #headerContent {
         background-size: cover !important;
         filter: none !important;
         overflow: hidden !important;
+    }
+}
+
+
+/* ==========================================================
+   FULLSCREEN PHOTO SIZE FIX - preserve all other styling
+   ========================================================== */
+@media (min-width: 769px) {
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) {
+        justify-content: stretch !important;
+    }
+
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-img {
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        object-fit: cover !important;
+        object-position: center 18% !important;
+    }
+
+    body.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-number {
+        flex: 0 0 2.7vh !important;
+        height: 2.7vh !important;
     }
 }
