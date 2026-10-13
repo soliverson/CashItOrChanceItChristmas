@@ -4754,3 +4754,59 @@ body.birthday-40-edition #headerContent {
         height: 2.7vh !important;
     }
 }
+
+
+/* ==========================================================
+   CHRISTMAS FULLSCREEN PHOTO FIX V2
+   Exact selector required to override the earlier birthday-40
+   fullscreen rule that uses !important.
+   ========================================================== */
+@media (min-width: 769px) {
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) {
+        justify-content: stretch !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-img {
+        flex: 1 1 0 !important;
+        width: 100% !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-number {
+        flex: 0 0 2.7vh !important;
+        height: 2.7vh !important;
+        min-height: 2.7vh !important;
+        max-height: 2.7vh !important;
+    }
+}
+
+/* ==========================================================
+   CHRISTMAS FULLSCREEN PORTRAIT CASE FIX
+   Keep the fullscreen photos portrait-shaped so faces/hats
+   are not cropped by the wider 7-column fullscreen grid.
+   ========================================================== */
+@media (min-width: 769px) {
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) {
+        width: 68% !important;
+        max-width: 68% !important;
+        height: 100% !important;
+        justify-self: center !important;
+        align-self: stretch !important;
+    }
+
+    body.birthday-40-edition.tv-fullscreen .briefcase:not(.center-open):not(.personal-box-reveal) .briefcase-img {
+        flex: 1 1 0 !important;
+        width: 100% !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+    }
+}
